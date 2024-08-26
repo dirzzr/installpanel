@@ -62,8 +62,14 @@ check_token() {
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  if [ "$USER_TOKEN" = "arifrur" ]; then
-    echo -e "${GREEN}AKSES BERHASIL${NC}}"
+  # Encode input user dengan base64
+  ENCRYPTED_USER_TOKEN=$(echo -n "$USER_TOKEN" | base64)
+
+  # Password yang sudah diencode
+  ENCRYPTED_PASSWORD="YXJpZnJ1cg=="
+
+  if [ "$ENCRYPTED_USER_TOKEN" = "$ENCRYPTED_PASSWORD" ]; then
+    echo -e "${GREEN}AKSES BERHASIL${NC}"
   else
     echo -e "${GREEN}Buy dulu Gih Ke arifhost${NC}"
     exit 1
