@@ -425,7 +425,7 @@ while true; do
   clear
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                   SELECT OPTION                 [+]${NC}"
+  echo -e "${BLUE}[+]                   ARIF HOSTING                  [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   echo -e "ARIF HOSTING :"
